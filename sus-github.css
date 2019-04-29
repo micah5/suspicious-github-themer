@@ -44,3 +44,7 @@
 .sus-nav {
   display: none !important;
 }
+
+.sus-header-image {
+  width: 10vw;
+}

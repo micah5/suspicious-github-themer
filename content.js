@@ -8,7 +8,8 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
       const susHeader = document.getElementsByClassName("Header")[0]
       susHeader.className += " sus-Header"
       const newLogo = document.createElement("img")
-      newLogo.setAttribute('src', 'https://avatars2.githubusercontent.com/u/275001?s=180&v=4');
+      newLogo.setAttribute('src', 'https://raw.githubusercontent.com/micah5/suspicious-github-themer/master/logo.jpg?token=AJSYAT7M4QG4L4CMRSKVEZC4Y4N3G')
+      newLogo.setAttribute('class', 'sus-header-image')
       susHeader.getElementsByClassName("Header-link")[0].replaceWith(newLogo)
       susHeader.getElementsByClassName("js-site-search-form")[0].className += " sus-js-site-search-form"
       //document.body.className += " sus-body"
@@ -16,6 +17,7 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
       susHeader.getElementsByTagName("nav")[0].setAttribute('style', 'display:none !important')
       susSubheader.className += " sus-subheader"
       susHeader.parentNode.insertBefore(susSubheader, susHeader.nextSibling)
+      susHeader.getElementsByClassName("mr-2 header-search-key-slash")[0].src = 'https://avatars2.githubusercontent.com/u/275001?s=180&v=4'
       sendResponse(true)
     } else if (msg.text && (msg.text == "get_on")) {
       sendResponse(on)
