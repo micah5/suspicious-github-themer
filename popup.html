@@ -89,6 +89,9 @@
       <button v-if="!on" @click="toggleOn">
         💡 turn on
       </button>
+      <button v-else @click="toggleOff" class="on">
+        💡 turn off
+      </button>
     </div>
   </div>
   <script src="vue.js"></script>

@@ -11,7 +11,9 @@
         "default_icon": "icon.png",
         "default_title": "Suspicious Github Themer",
         "default_popup": "popup.html"
-    },
+    }, "web_accessible_resources": [
+        "sus-github-main.css"
+    ],
     "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
-    "permissions": ["activeTab"]
+    "permissions": ["activeTab", "tabs"]
 }

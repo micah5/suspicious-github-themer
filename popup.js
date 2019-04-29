@@ -26,6 +26,11 @@ new Vue({
           console.log('huh', this.on)
         });
     });
+    /*cookieName = this.check_cookie_name('sus-github-themer')
+    this.on = (cookieName == 'true')
+    if (this.on) {
+      this.toggleOn()
+    }*/
   },
   methods: {
     toggleOn: function() {
@@ -37,11 +42,29 @@ new Vue({
             if (res == true) {
               this.on = true
             }
+            //document.cookie = `sus-github-themer=${this.on}`
+          });
+      });
+    },
+    toggleOff: function() {
+      console.log('toggle off')
+      this.on = false
+      chrome.tabs.query({"active": true, "lastFocusedWindow": true}, (tabs) => {
+        let tab = tabs[0]
+        chrome.tabs.sendMessage(tab.id, { text: "toggle_off" },
+          (res) => {
+            console.log('element', res)
+            //document.cookie = `sus-github-themer=${this.on}`
           });
       });
     },
     openLink: function(url) {
       chrome.tabs.create({ url: url })
+    },
+    check_cookie_name: function(name) {
+      var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'))
+      if (match) return(match[2])
+      else return null
     }
   }
 })

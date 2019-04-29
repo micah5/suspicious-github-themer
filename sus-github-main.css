@@ -1,0 +1,24 @@
+.subnav-item.selected, .subnav-item.selected:focus, .subnav-item.selected:hover {
+    background-color: #F2A243;
+    border-color: #F2A243;
+}
+
+a {
+    color: #F2A243;
+}
+
+.Box-header {
+  background-color: #000000;
+}
+
+.blankslate {
+  background-color: #000000;
+}
+
+body {
+  background-color: #000000;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: #ffffff;
+}

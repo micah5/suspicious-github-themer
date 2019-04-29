@@ -5,27 +5,63 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
       on = true
       //const susHeader = document.getElementsByClassName("Header")[0].cloneNode(true)
       //document.getElementsByClassName("Header")[0].style.display = 'none'
-      const susHeader = document.getElementsByClassName("Header")[0]
-      susHeader.className += " sus-Header"
-      const newLogo = document.createElement("img")
-      newLogo.setAttribute('src', 'https://raw.githubusercontent.com/micah5/suspicious-github-themer/master/logo.jpg')
-      newLogo.setAttribute('class', 'sus-header-image')
-      susHeader.getElementsByClassName("Header-link")[0].replaceWith(newLogo)
-      susHeader.getElementsByClassName("js-site-search-form")[0].className += " sus-js-site-search-form"
-      //document.body.className += " sus-body"
-      const susSubheader = susHeader.getElementsByTagName("nav")[0].cloneNode(true)
-      susHeader.getElementsByTagName("nav")[0].setAttribute('style', 'display:none !important')
-      susSubheader.className += " sus-subheader"
-      susHeader.parentNode.insertBefore(susSubheader, susHeader.nextSibling)
-      susHeader.getElementsByClassName("header-search-key-slash")[0].src = 'https://raw.githubusercontent.com/micah5/suspicious-github-themer/master/search.png'
-      susHeader.getElementsByClassName("header-search-key-slash")[0].className += ' sus-search'
+      turnOn()
+      document.cookie = `sus-github-themer=${on}`
       sendResponse(true)
     } else if (msg.text && (msg.text == "get_on")) {
+      sendResponse(on)
+    } else if (msg.text && (msg.text == "toggle_off")) {
+      on = false
+      document.cookie = `sus-github-themer=${on}`
       sendResponse(on)
     }
 });
 
 let on = false;
+
+function check_cookie_name(name) {
+  console.log('document.cookie', document.cookie)
+  var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'))
+  if (match) return(match[2])
+  else return null
+}
+
+const cookieName = this.check_cookie_name('sus-github-themer')
+on = (cookieName == 'true')
+if (on) {
+  turnOn()
+}
+
+function turnOn() {
+  const susHeader = document.getElementsByClassName("Header")[0]
+  susHeader.className += " sus-Header"
+  const newLogo = document.createElement("img")
+  newLogo.setAttribute('src', 'https://raw.githubusercontent.com/micah5/suspicious-github-themer/master/logo.jpg')
+  newLogo.setAttribute('class', 'sus-header-image')
+  susHeader.getElementsByClassName("Header-link")[0].replaceWith(newLogo)
+  susHeader.getElementsByClassName("js-site-search-form")[0].className += " sus-js-site-search-form"
+  //document.body.className += " sus-body"
+  const susSubheader = susHeader.getElementsByTagName("nav")[0].cloneNode(true)
+  susHeader.getElementsByTagName("nav")[0].setAttribute('style', 'display:none !important')
+  susSubheader.className += " sus-subheader"
+  susHeader.parentNode.insertBefore(susSubheader, susHeader.nextSibling)
+  susHeader.getElementsByClassName("header-search-key-slash")[0].src = 'https://raw.githubusercontent.com/micah5/suspicious-github-themer/master/search.png'
+  susHeader.getElementsByClassName("header-search-key-slash")[0].className += ' sus-search'
+  url = window.location.href
+  page = url.substr(url.lastIndexOf('/') + 1)
+  console.log(page)
+  switch (page) {
+    case 'pulls': susSubheader.getElementsByTagName("a")[0].className += " active"; break
+    case 'issues': susSubheader.getElementsByTagName("a")[1].className += " active"; break
+    case 'marketplace': susSubheader.getElementsByTagName("a")[3].className += " active"; break
+    case 'explore': susSubheader.getElementsByTagName("a")[4].className += " active"; break
+  }
+  var link = document.createElement("link");
+  link.href = chrome.extension.getURL("sus-github-main.css");
+  link.type = "text/css";
+  link.rel = "stylesheet";
+  document.getElementsByTagName("head")[0].appendChild(link);
+}
 
 /*
 let startTime = null;
