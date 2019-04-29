@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name":    "Suspicious Github Themer",
+    "version": "1.0",
+    "content_scripts": [{
+        "matches": ["*://*.github.com/*"],
+        "css":     ["sus-github.css"],
+        "js":      ["content.js"]
+    }],
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "Suspicious Github Themer",
+        "default_popup": "popup.html"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "permissions": ["activeTab"]
+}

@@ -1,0 +1,46 @@
+.sus-body {
+    background: #000;
+    color: #fff;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+}
+
+.sus-Header {
+  background-color: #1A1A1A;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #242424;
+}
+
+.sus-subheader > .Header-link {
+  text-transform: uppercase;
+  font-size: 11px;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  line-height: 38px;
+}
+
+.sus-subheader > .Header-link:hover {
+  background-color: #191919;
+  color: white;
+}
+
+.sus-subheader > .Header-link .active {
+  border-bottom: 2px solid #F2A243;
+}
+
+.sus-subheader {
+  background-color: #0f0f0f;
+  border-bottom: 1px solid #1b1b1b;
+  height: 38px;
+}
+
+.sus-js-site-search-form {
+  background: linear-gradient(to right, #363636 0%,#363636 88%,#000000 50%,#F2A243 50%,#F2A243 100%);
+  font-style: italic;
+}
+
+.sus-nav {
+  display: none !important;
+}
