@@ -6,7 +6,7 @@
 }
 
 .sus-Header {
-  background-color: #1A1A1A;
+  background-color: #1A1A1A !important;
   border-top: 1px solid #555;
   border-bottom: 1px solid #242424;
 }
@@ -47,4 +47,9 @@
 
 .sus-header-image {
   width: 10vw;
+}
+
+.sus-search {
+  width: 2rem;
+  padding: 10px;
 }
