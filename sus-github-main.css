@@ -19,8 +19,63 @@ a {
 	background-color: #000;
 }
 
+.reponav-item {
+	border-radius:0 !important;
+	border: 0;
+}
+
+.reponav-item .octicon {
+	color:white;
+}
+
+.reponav-item.selected {
+	border-top:3px solid transparent;
+	border-color:#e36209 #e1e4e8 transparent;
+}
+
+.reponav-item.selected:focus, .reponav-item.selected:hover{
+	color:#000;
+	border-top:3px solid transparent;
+	border-color:#e36209 #e1e4e8 transparent;
+}
+
+.reponav-item:focus, .reponav-item:hover {
+	color:#fff;
+	border-top:3px solid transparent;
+	border-color:#e36209 transparent transparent transparent;
+}
+
 .pagehead {
 	border-color: #fff;
+}
+
+.file-navigation details .btn {
+	background-color: rgb(15, 15, 15);
+	background-image: none;
+	border:1px solid #F2A243;
+	color:#fff;
+}
+
+.file-navigation .new-pull-request-btn {
+	background-color: rgb(15, 15, 15);
+	background-image: none;
+	border:1px solid #F2A243;
+	color:#fff;
+}
+
+.file-navigation .BtnGroup .btn {
+	background-color: rgb(15, 15, 15);
+	background-image: none;
+	border:1px solid #F2A243;
+	color:#fff;
+}
+
+.branch-infobar {
+	background-color: rgb(15, 15, 15);
+	background-image: none;
+	border:1px solid #F2A243;
+	border-color:#F2A243 #F2A243 transparent #F2A243;
+	color:#fff;
 }
 
 .reponav-item {
@@ -36,6 +91,8 @@ a {
 }
 
 .commit-tease {
+	border:1px solid #F2A243;
+	border-radius:0 !important;
 	background-color: #000;
 	color: #fff;
 }
@@ -48,8 +105,16 @@ a {
 	color: #fff;
 }
 
+table.files {
+	border-color:#F2A243;
+}
+
 table.files tr {
 	background-color:#000;
+}
+
+table.files td {
+	border-color:#F2A243;
 }
 
 table.files td.icon {
