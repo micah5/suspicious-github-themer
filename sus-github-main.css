@@ -15,6 +15,63 @@ a {
   background-color: #000000;
 }
 
+.repohead.experiment-repo-nav {
+	background-color: #000;
+}
+
+.pagehead {
+	border-color: #fff;
+}
+
+.reponav-item {
+	color:#fff;
+}
+
+.stats-switcher-wrapper .numbers-summary .nolink, .stats-switcher-wrapper .numbers-summary a, .stats-switcher-wrapper .numbers-summary a .text-emphasized {
+	color:#fff;
+}
+
+.repository-content .text-gray-dark {
+	color:#fff !important;
+}
+
+.commit-tease {
+	background-color: #000;
+	color: #fff;
+}
+
+.commit-tease .AvatarStack-body {
+	background-color: #000;
+}
+
+.team-mention, .user-mention {
+	color: #fff;
+}
+
+table.files tr {
+	background-color:#000;
+}
+
+table.files td.icon {
+	color:#F2A243;
+}
+
+table.files td.message a {
+	color: #fff !important;
+}
+
+table.files tr.navigation-focus td, table.files tr[aria-selected=true] td.message a {
+	color:#000 !important;
+}
+
+table.files td.age span {
+	color: #fff !important;
+}
+
+table.files tr.navigation-focus td, table.files tr[aria-selected=true] td.age span {
+	color:#000 !important;
+}
+
 body {
   background-color: #000000;
 }
