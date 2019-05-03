@@ -15,6 +15,128 @@ a {
   background-color: #000000;
 }
 
+.repohead.experiment-repo-nav {
+	background-color: #000;
+}
+
+.reponav-item {
+	border-radius:0 !important;
+	border: 0;
+}
+
+.reponav-item .octicon {
+	color:white;
+}
+
+.reponav-item.selected {
+	border-top:3px solid transparent;
+	border-color:#e36209 #e1e4e8 transparent;
+}
+
+.reponav-item.selected:focus, .reponav-item.selected:hover{
+	color:#000;
+	border-top:3px solid transparent;
+	border-color:#e36209 #e1e4e8 transparent;
+}
+
+.reponav-item:focus, .reponav-item:hover {
+	color:#fff;
+	border-top:3px solid transparent;
+	border-color:#e36209 transparent transparent transparent;
+}
+
+.pagehead {
+	border-color: #fff;
+}
+
+.file-navigation details .btn {
+	background-color: rgb(15, 15, 15);
+	background-image: none;
+	border:1px solid #F2A243;
+	color:#fff;
+}
+
+.file-navigation .new-pull-request-btn {
+	background-color: rgb(15, 15, 15);
+	background-image: none;
+	border:1px solid #F2A243;
+	color:#fff;
+}
+
+.file-navigation .BtnGroup .btn {
+	background-color: rgb(15, 15, 15);
+	background-image: none;
+	border:1px solid #F2A243;
+	color:#fff;
+}
+
+.branch-infobar {
+	background-color: rgb(15, 15, 15);
+	background-image: none;
+	border:1px solid #F2A243;
+	border-color:#F2A243 #F2A243 transparent #F2A243;
+	color:#fff;
+}
+
+.reponav-item {
+	color:#fff;
+}
+
+.stats-switcher-wrapper .numbers-summary .nolink, .stats-switcher-wrapper .numbers-summary a, .stats-switcher-wrapper .numbers-summary a .text-emphasized {
+	color:#fff;
+}
+
+.repository-content .text-gray-dark {
+	color:#fff !important;
+}
+
+.commit-tease {
+	border:1px solid #F2A243;
+	border-radius:0 !important;
+	background-color: #000;
+	color: #fff;
+}
+
+.commit-tease .AvatarStack-body {
+	background-color: #000;
+}
+
+.team-mention, .user-mention {
+	color: #fff;
+}
+
+table.files {
+	border-color:#F2A243;
+}
+
+table.files tr {
+	background-color:#000;
+}
+
+table.files td {
+	border-color:#F2A243;
+}
+
+table.files td.icon {
+	color:#F2A243;
+}
+
+table.files td.message a {
+	color: #fff !important;
+}
+
+table.files tr.navigation-focus td, table.files tr[aria-selected=true] td.message a {
+	color:#000 !important;
+}
+
+table.files td.age span {
+	color: #fff !important;
+}
+
+table.files tr.navigation-focus td, table.files tr[aria-selected=true] td.age span {
+	color:#000 !important;
+}
+
 body {
   background-color: #000000;
 }
